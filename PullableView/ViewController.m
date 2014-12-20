@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "PullableView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *pullableViewHeader;
+@property (weak, nonatomic) IBOutlet PullableView *slideView;
 
 @end
 
@@ -16,12 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.slideView.minVisiblePoint = CGPointMake(0,self.pullableViewHeader.frame.size.height);
+
+    self.slideView.maxVisiblePoint = CGPointMake(0,self.slideView.frame.size.height);
+
+    self.slideView.headerView = self.pullableViewHeader;
+
 }
 
 @end

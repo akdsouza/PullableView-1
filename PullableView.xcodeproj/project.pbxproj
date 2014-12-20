@@ -14,6 +14,8 @@
 		DC66828B1A43DE6A00280A0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC66828A1A43DE6A00280A0A /* Images.xcassets */; };
 		DC66828E1A43DE6A00280A0A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC66828C1A43DE6A00280A0A /* LaunchScreen.xib */; };
 		DC66829A1A43DE6A00280A0A /* PullableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6682991A43DE6A00280A0A /* PullableViewTests.m */; };
+		DC6682A51A43DE8900280A0A /* PullableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6682A41A43DE8900280A0A /* PullableView.m */; };
+		DC6682AC1A45156200280A0A /* UpCalculationState.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6682AB1A45156200280A0A /* UpCalculationState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		DC6682931A43DE6A00280A0A /* PullableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6682981A43DE6A00280A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6682991A43DE6A00280A0A /* PullableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullableViewTests.m; sourceTree = "<group>"; };
+		DC6682A31A43DE8900280A0A /* PullableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullableView.h; sourceTree = "<group>"; };
+		DC6682A41A43DE8900280A0A /* PullableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullableView.m; sourceTree = "<group>"; };
+		DC6682A81A45048B00280A0A /* CalculationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculationState.h; sourceTree = "<group>"; };
+		DC6682AA1A45156200280A0A /* UpCalculationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpCalculationState.h; sourceTree = "<group>"; };
+		DC6682AB1A45156200280A0A /* UpCalculationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpCalculationState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +88,7 @@
 		DC66827C1A43DE6A00280A0A /* PullableView */ = {
 			isa = PBXGroup;
 			children = (
+				DC6682A61A45044300280A0A /* PullableView */,
 				DC6682811A43DE6A00280A0A /* AppDelegate.h */,
 				DC6682821A43DE6A00280A0A /* AppDelegate.m */,
 				DC6682841A43DE6A00280A0A /* ViewController.h */,
@@ -117,6 +125,34 @@
 				DC6682981A43DE6A00280A0A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC6682A61A45044300280A0A /* PullableView */ = {
+			isa = PBXGroup;
+			children = (
+				DC6682A71A45045E00280A0A /* Direcation Calculation State */,
+				DC6682A31A43DE8900280A0A /* PullableView.h */,
+				DC6682A41A43DE8900280A0A /* PullableView.m */,
+			);
+			name = PullableView;
+			sourceTree = "<group>";
+		};
+		DC6682A71A45045E00280A0A /* Direcation Calculation State */ = {
+			isa = PBXGroup;
+			children = (
+				DC6682A91A45154600280A0A /* Implemenation */,
+				DC6682A81A45048B00280A0A /* CalculationState.h */,
+			);
+			name = "Direcation Calculation State";
+			sourceTree = "<group>";
+		};
+		DC6682A91A45154600280A0A /* Implemenation */ = {
+			isa = PBXGroup;
+			children = (
+				DC6682AA1A45156200280A0A /* UpCalculationState.h */,
+				DC6682AB1A45156200280A0A /* UpCalculationState.m */,
+			);
+			name = Implemenation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC6682861A43DE6A00280A0A /* ViewController.m in Sources */,
+				DC6682A51A43DE8900280A0A /* PullableView.m in Sources */,
+				DC6682AC1A45156200280A0A /* UpCalculationState.m in Sources */,
 				DC6682831A43DE6A00280A0A /* AppDelegate.m in Sources */,
 				DC6682801A43DE6A00280A0A /* main.m in Sources */,
 			);
@@ -344,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PullableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PullableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +452,7 @@
 				DC66829F1A43DE6A00280A0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC6682A01A43DE6A00280A0A /* Build configuration list for PBXNativeTarget "PullableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +461,7 @@
 				DC6682A21A43DE6A00280A0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

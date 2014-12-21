@@ -112,7 +112,10 @@ typedef enum{
 
 - (void)handleTap:(UITapGestureRecognizer *)sender {
     
-    if ([sender state] == UIGestureRecognizerStateEnded) {
+    if ([sender state] == UIGestureRecognizerStateBegan) {
+
+        [self detectDirection];
+    }else if ([sender state] == UIGestureRecognizerStateEnded) {
 
         [self setOpened:!opened animated:animate];
     }
